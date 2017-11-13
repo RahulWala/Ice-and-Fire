@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<div class="row" ng-repeat = "book in bookCtrl.gotBookData">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<div class="card text-center mt-1 mb-1">
+				<h2 class="card-header card-primary">{{$index+1}}. {{book.name}}</h2>
+				<div class="card-block">
+					<p class="card-text">Published By</p>
+					<h3 class="card-title" ng-repeat = "aut in book.authors">{{aut}}</h3>
+					<p class="card-text">Released On : {{book.released | date:medium}}</p>
+				</div>
+			  <div class="card-footer bg-dark">
+			  	<a href='#!books/{{book.url.split("/").pop()}}' class="btn btn-primary">Book Info</a>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>

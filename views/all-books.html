@@ -1,0 +1,23 @@
+<div class="container-fluid" ng-init = "bookCtrl.allBooks()">
+	<div class="row">
+		<!-- Sort by name -->
+		<div class="col-lg-6 col-md-6 col-sm-12 mt-1 mb-1">
+			<button type="button" class="btn btn-success btn-lg btn-block" ng-click="orderByField = 'name'; reverseSort = !reverseSort">Sort By Name
+				<span ng-show="orderByField == 'name'">
+				<span ng-show="!reverseSort" class="fa fa-sort-desc" aria-hidden="true">
+				</span>
+				<span ng-show="reverseSort" class="fa fa-sort-asc" aria-hidden="true">
+				</span>
+				</span>
+			</button>
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-sm-12 mt-1 mb-1">
+			<button type="button" class="btn btn-warning btn-lg btn-block" ng-click="orderByField = 'released'; reverseSort = !reverseSort">Sort By Released year
+				<span ng-show="orderByField == 'released'"><span ng-show="!reverseSort" class="fa fa-sort-desc" aria-hidden="true"></span><span ng-show="reverseSort" class="fa fa-sort-asc" aria-hidden="true"></span></span>
+			</button>
+		</div>
+
+	</div>
+		<all-books></all-books>
+	</div>
