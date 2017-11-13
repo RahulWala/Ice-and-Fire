@@ -1,6 +1,5 @@
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider
-
 	.when('/books',{
 		templateUrl    : 'views/all-books.html',
 		controller     : 'bookController',

@@ -1,8 +1,8 @@
-app.directive("allBooks", function () {
+app.directive("allBooks", function(){
 	return{
-		restrict: 'E',
-		templateUrl: 'views/all-books.html',
-		controller: function($scope) {
+		restrict : 'E',
+		templateUrl : 'views/bookView.html',
+		controller : function($scope) {
 			
 		}
 	}

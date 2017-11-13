@@ -9,6 +9,7 @@
 	<!--Bootstrap CSS-->
     <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
 
+     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!--Bootstrap Javascript-->
     <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
 
@@ -17,7 +18,7 @@
 
 <title>Game of Thrones</title>
 </head>
-<body ng-controller = "MainController as MyCtrl">
+<body>
 
 	<!--Navbar-->
 	<div class="container-fluid">
@@ -54,11 +55,11 @@
 						<a href="#!books" class="btn btn-block btn-primary"><span class="fa fa-book" aria-hidden="true">Books</span></a>
 					</div>
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3" ng-controller="charController as charCtrl">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3">
 						<a href="#!characters" class="btn btn-block btn-success"><span class="fa fa-user" aria-hidden="true">Characters</span></a>
 					</div>
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3" ng-controller="houseController as houseCtrl">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3">
 						<a href="#!houses" class="btn btn-block btn-warning"><span class="fa fa-home" aria-hidden="true">Houses</span></a>
 					</div>
 				</div>
@@ -82,16 +83,18 @@
 </div>
 
 
+	<!--Angular CDN-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular-route.min.js"></script>
 
    <!--Main Controller-->
    <script type="text/javascript" src="angular/app.js"></script>
 
-  <!--Angular CDN-->
-   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+   <!--Angular Custom Directive File-->
+   <script type="text/javascript" src="angular/directives/custom-directive.js"></script>
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-
-	<script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular-route.min.js"></script>
+   <!--Angular Service File-->
+   <script type="text/javascript" src="angular/services/custom-service.js"></script>
 
    <!--Book Controller-->
    <script type="text/javascript" src="angular/controllers/book-controller.js"></script>
@@ -101,11 +104,7 @@
 
    <!--House Controller-->
 
-   <!--Angular Custom Directive File-->
-   <script type="text/javascript" src="angular/directives/custom-directive.js"></script>
-
-   <!--Angular Service File-->
-   <script type="text/javascript" src="angular/services/custom-service.js"></script>
+  
 
    <!--Angular Route File-->
    <script type="text/javascript" src="angular/route.js"></script>
